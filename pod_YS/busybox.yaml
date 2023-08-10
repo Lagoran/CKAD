@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: busybox
-  namespace: default
-  labels:
-    app: busybox
+    name: busybox
+    namespace: default
 spec:
-  containers:
-  - name: busybox
-    image: busybox
+    containers:
+    - name: busybox
+    image: progrium/busybox
     command:
-      - sleep
-      - "3600"
+        - sleep
+        - "3600"
+    imagePullPolicy: IfNotPresent
+    restartPolicy: Always
